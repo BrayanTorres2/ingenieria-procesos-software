@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+@font-face {
+    font-family: Acumin;
+    font-weight: bold;
+    src: url("Acumin-BdPro.otf") format("opentype");
+}
+
+#app-container {
+    width: 100%;
+    max-width: none;
+}
+
+body {
+    /*background-color: #f9f9f9;*/
+    background-color: #1f2630;
+    /*color: #333333;*/
+    color: #abc5df;
+    font-size: 15px;
+    margin: 0px;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    margin: 0.3rem 0rem;
+}
+
+.banner {
+    height: 5.5rem;
+    padding: 0rem 2rem 0rem;
+    background-color: #1f2630;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner Img {
+    position: relative;
+    height: 3rem;
+    width: auto;
+    margin-left: 2%;
+}
+
+H5 {
+    color: #7fafdf;
+    font-weight: 300;
+}
+
+H5, H3 {
+    /*font-family: Acumin, "Helvetica Neue", sans-serif;*/
+    font-family: "Playfair Display", sans-serif;
+}
+
+#left-column {
+    background-color: #252e3f;
+    margin-top: 20px;
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    min-height: calc(100vh - 5.5rem);
+}
+
+#right-column {
+    margin-top: 20px;
+    background-color: #252e3f;
+    padding: 0rem 2rem;
+    min-height: calc(100vh - 5.5rem);
+}
+
+.table-row {
+    height: 63px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.wait_time_graph > div, .patient_score_graph > div {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.draglayer {
+    cursor: pointer !important;
+}
+
+#intro {
+    border-left: #2cfec1 solid 1rem;
+    /*margin: 20px 0px;*/
+    /*font-family: "Helvetica Neue", sans-serif;*/
+    text-align: justify;
+    padding-left: 1rem;
+    max-width: 100rem;
+    margin: 2rem 0 3rem 0;
+}
+
+#control-card > p {
+    font-weight: bold;
+}
+
+#model_graph, #cpd_card {
+    background-color: #252e3f;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#control-card {
+    background-color: #252e3f;
+}
+
+
+
+#model_graph > b, #cpd_card > b {
+    line-height: 2.5;
+}
+
+#cpd_card {
+    margin: 20px 0px;
+}
+
+#patient_volume_hm {
+    height: 400px;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.row-department > b {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header_wait_time_min, #header_care_score {
+    display: table;
+}
+
+#header_wait_time_min > b, #header_care_score > b {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Dropdown
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.Select-value {
+    cursor: pointer;
+}
+
+.Select-control {
+    color: #7fafdf !important;
+}
+
+.Select {
+    color: #7fafdf !important;
+}
+
+.Select-menu-outer {
+    background-color: #252e3f !important;
+    border: 1px solid #7fafdf !important;
+}
+
+.Select div {
+    background-color: #252e3f !important;
+}
+
+.Select-menu-outer div:hover {
+    background-color: rgba(255, 255, 255, 0.01) !important;
+    cursor: pointer;
+}
+
+.Select-value-label {
+    color: #7fafdf !important;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    border: 1px solid #7fafdf !important;
+    border-radius: 4px !important;
+}
+
+
+/* Date picker*/
+.DateInput, .DateInput_1 {
+    border-radius: 4px 0 0 4px !important;
+    background-color: #252e3f !important;
+}
+
+.DateInput_input, .DateInput_input_1 {
+    Height: 34px !important;
+    Width: 100% !important;
+    border-radius: inherit;
+    background-color: #252e3f !important;
+    color: #7fafdf !important;
+}
+
+.SingleDatePickerInput__withBorder {
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #ccc !important;
+    background-color: #252e3f !important;
+}
+
+/* Slider
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#slider-container {
+    background-color: #252e3f;
+    padding: 2rem 6rem 4rem 4rem;
+    height: 8rem;
+}
+
+.rc-slider-dot-active, .rc-slider-handle {
+    border-color: #2cfec1 !important;
+}
+
+.rc-slider-track {
+    background-color: #2cfec1 !important
+}
+
+.rc-slider-rail {
+    background-color: #1d2731 !important
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles / ipad (Portrait)
+  */
+
+@media only screen and (max-width: 750px), screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        font-size: 13px;
+        margin: 0px;
+    }
+
+    .banner {
+        height: 6rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #intro {
+        margin: 10px 0px;
+    }
+
+    #left-column, #right-column {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #right-column {
+        padding: 0rem 0.5rem;
+    }
+
+    #reset-btn-outer {
+        text-align: center;
+    }
+
+    .table-row > div {
+        width: 100% !important;
+        text-align: center;
+        margin: auto;
+    }
+
+    .table-row:nth-child(even), .table-row:nth-child(odd) {
+        background-color: #FFFFFF;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #wait_time_table:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #model_graph > b, #cpd_card > b {
+        line-height: 2.5;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    .annotation-text {
+        font-size: 0.8rem !important;
+    }
+
+}
