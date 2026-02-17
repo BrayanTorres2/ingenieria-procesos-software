@@ -1,0 +1,16 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/sentimientos", "."]
+
+- name: gcr.io/cloud-builders/docker
+  args: ["push", "gcr.io/$PROJECT_ID/sentimientos"]
+
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  args:
+    [
+      "gcloud", "run", "deploy", "sentimientos",
+      "--image", "gcr.io/$PROJECT_ID/sentimientos",
+      "--region", "us-central1",
+      "--platform", "managed",
+      "--allow-unauthenticated"
+    ]

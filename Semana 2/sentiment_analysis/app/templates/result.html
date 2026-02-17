@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="result-container">
+    <h2>Resultado del Análisis</h2>
+
+    <p>Total de comentarios analizados: <strong>{{ total }}</strong></p>
+
+    <img src="data:image/png;base64,{{ grafico }}" alt="Gráfico de sentimientos">
+
+    <div class="actions">
+        <a
+            class="btn-download"
+            download="resultado_sentimientos.xlsx"
+            href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{{ excel }}">
+            Descargar Excel
+        </a>
+
+        <a href="/" class="btn-secondary">
+            Volver
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

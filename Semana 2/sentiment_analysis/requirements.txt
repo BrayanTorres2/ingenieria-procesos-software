@@ -1,0 +1,9 @@
+flask
+gunicorn
+authlib
+pandas
+matplotlib
+openpyxl
+google-cloud-language
+google-auth
+requests

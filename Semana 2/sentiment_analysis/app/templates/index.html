@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Sentimientos</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="card">
+    <h1>📊 Análisis de Sentimientos</h1>
+
+    {% if not user %}
+
+        <div id="g_id_onload"
+             data-client_id="{{ client_id }}"
+             data-callback="handleCredentialResponse">
+        </div>
+
+        <div class="g_id_signin"></div>
+
+    {% else %}
+
+        <p>👤 {{ user.name }} ({{ user.email }})</p>
+        <a href="/logout" class="btn-logout">Cerrar sesión</a>
+
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box">
+                <label>📁 Selecciona tu archivo Excel</label>
+                <input type="file" name="file" accept=".xlsx" required>
+            </div>
+
+            <button type="submit" class="btn-primary">
+                Analizar Archivo
+            </button>
+
+        </form>
+
+        <div class="footer-text">
+            Soporta archivos .xlsx
+        </div>
+
+    {% endif %}
+</div>
+
+<script>
+function handleCredentialResponse(response) {
+    fetch("/login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({credential: response.credential})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.status === "success") {
+            location.reload();
+        } else {
+            alert("No autorizado");
+        }
+    });
+}
+</script>
+
+</body>
+</html>

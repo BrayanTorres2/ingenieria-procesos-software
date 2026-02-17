@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0c2340, #163e72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card principal */
+.card {
+    background: #ffffff;
+    width: 520px;
+    padding: 50px 45px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.card h1 {
+    margin: 0 0 35px 0;
+    font-size: 28px;
+    color: #0c2340;
+    font-weight: 600;
+}
+
+/* Área de carga */
+.upload-box {
+    border: 2px dashed #0c2340;
+    border-radius: 18px;
+    padding: 35px 20px;
+    margin-bottom: 30px;
+    transition: background 0.2s ease;
+}
+
+.upload-box:hover {
+    background: #f7f9fc;
+}
+
+.upload-box label {
+    display: block;
+    font-size: 16px;
+    color: #0c2340;
+    margin-bottom: 15px;
+}
+
+/* Input file */
+.upload-box input[type="file"] {
+    font-size: 14px;
+}
+
+/* Botón principal */
+.btn-primary {
+    background: linear-gradient(135deg, #0c2340, #163e72);
+    color: #ffffff;
+    border: none;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(12, 35, 64, 0.35);
+}
+
+/* Texto inferior */
+.footer-text {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ---------------- RESULTADOS ---------------- */
+
+.result-container {
+    background: #ffffff;
+    width: 700px;
+    padding: 45px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.result-container h2 {
+    margin-top: 0;
+    color: #0c2340;
+}
+
+.result-container img {
+    max-width: 100%;
+    margin: 30px 0;
+}
+
+/* Botones de resultados */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-secondary {
+    background: #e6e9ef;
+    color: #0c2340;
+    padding: 12px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s ease;
+}
+
+.btn-secondary:hover {
+    background: #d7dbe4;
+}
+
+.btn-download {
+    background: linear-gradient(135deg, #0c2340, #163e72);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Botón cerrar sesión elegante */
+.btn-logout {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0c2340;
+    border: 1.5px solid #0c2340;
+    border-radius: 12px;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+    background: #0c2340;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(12, 35, 64, 0.25);
+    transform: translateY(-1px);
+}
+
